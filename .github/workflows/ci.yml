@@ -1,0 +1,31 @@
+name Test Backend & Frontend
+
+on
+  push
+    branches
+      - main
+
+jobs
+  test-backend
+    runs-on ubuntu-latest
+    steps
+      - uses actionscheckout@v3
+      - name Install backend dependencies
+        run 
+          cd backend
+          npm install
+      - name Simulate backend test
+        run 
+          echo Backend test simulated
+
+  test-frontend
+    runs-on ubuntu-latest
+    steps
+      - uses actionscheckout@v3
+      - name Install frontend dependencies
+        run 
+          cd frontend
+          npm install
+      - name Simulate frontend test
+        run 
+          echo Frontend test simulated
