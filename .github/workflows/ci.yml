@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install backend dependencies
         run: |
-          cd backend
+          cd bakend
           npm install
       - name: Simulate backend test
         run: echo "Backend test simulated"
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Install frontend dependencies
         run: |
-          cd frontend
+          cd front
           npm install
       - name: Simulate frontend test
         run: echo "Frontend test simulated"
